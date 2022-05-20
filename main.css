@@ -1,0 +1,239 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --header-height: 4.5rem;
+
+  /* HSL color mode */
+  --base-color: hsl(0 0% 90%);
+  --base-color-second: hsl(210 10% 30%);
+  --base-color-alt: hsl(160 41% 1%);
+  --title-color: hsl(160 41% 1%);
+  --title-color-light: hsl(0 0% 90%);
+  --text-color: hsl(160 41% 1%);
+  --text-color-light: hsl(0 0% 90%);
+  --details: #6c757d ;
+  --details-blue: #DFDFE2;
+  --details-green: hsl(141 43% 62%);
+
+  /* font-size */
+  --title-font-size: 1.75rem;
+  --subtitle-font-size: 1.25rem;
+  --body-text: 1.125rem;
+  /* font-type */
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/*===  BASE ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 var(--body-text) var(--body-font);
+  color: var(--text-color-light);
+  background: var(--base-color-second);
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.title {
+  font: 700 var(--title-font-size) var(--title-font);
+  color: var(--title-color-light);
+  -webkit-font-smoothing: auto;
+}
+
+.subtitle {
+  font: 700 var(--subtitle-font-size) var(--title-font);
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--details-green);
+  color: var(--text-color);
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  font: 700 1.2rem var(--title-font);
+  transition: background 0.3s;
+  border: none;
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #4FB674;
+  transform: translateY(-5px)
+}
+
+.divider-1 {
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    #fa2e00,
+    rgb(197, 198, 198)
+  );
+}
+
+/*====  LAYOUT ============================ */
+.section {
+  margin-bottom: 2rem;
+}
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/*====  MAIN ============================ */
+.top-images svg{
+  transform: rotate(180deg);
+}
+
+span {
+  color: #fa2e00;
+}
+
+ol {
+  padding: 1rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/*====  FOOTER ============================ */
+
+footer {
+  background: var(--details);
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  margin-top: 2rem;
+}
+
+footer.section {
+  padding: 1rem 0;
+}
+footer img {
+  width: 2rem;
+}
+
+footer .brand p {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+
+footer .social a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+/*====  RESPONSIVO ============================ */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .cover_image{
+    width: 1120px; 
+    height: 13rem; 
+    object-fit: cover;
+  }
+
+  /*====  SECTION 1 ============================ */
+    #section_1 .container {
+      grid-auto-flow: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  
+    #section_1 .image {
+      order: 1;
+    }
+
+    #section_1 .text {
+      order: 0;
+      max-width: 30rem;
+    }
+
+    /*====  SECTION 2 ============================ */
+    #section_2 .container {
+      grid-auto-flow: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  
+    #section_2 .image {
+      order: 0;
+    }
+
+    #section_2 .text {
+      order: 1;
+      max-width: 30rem;
+    }
+
+    /*====  SECTION 3 ============================ */
+    #section_3 .column {
+      float: left;
+      width: 50%;
+      padding: 3rem;
+    }
+    #section_3 .images::after {
+      content: " ";
+      clear: both;
+      display: table;
+    }
+
+      /*====  SECTION 6 ============================ */
+      #section_6 .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      #section_6 .images::after {
+        content: " ";
+        clear: both;
+        display: table;
+      }
+  
+
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.375rem;
+    --body-text: 1.5rem;
+  }
+}
