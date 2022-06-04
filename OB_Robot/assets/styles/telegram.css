@@ -54,7 +54,7 @@
  }
  video {
     width: 100%;
-    height: auto;
+    height: 500px;
  }
  .telegram-btn-box{
     position: absolute;
@@ -99,18 +99,19 @@
     width: 100%;
     /* height: auto; */
     height: 500px;
-    background-color: red;
+    border-radius: 18px;
  }
  .image-with-label{
     display: flex;
     flex-direction: column;
+    align-items: center;
  }
  .image-with-label label{
     width: 100%;
     text-align:center;
  }
  .image-with-label img{
-    width: 100%;
+    width: 90%;
     height: 500px;
     /* height: auto; */
     background-color: red;
